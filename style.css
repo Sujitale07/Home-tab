@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{  
+    overflow: hidden;
+    font-family: Outfit;
+    background-color: rgb(7, 11, 10);
+    color: cyan;    
+}
+
+.container-two{
+    width: 33.3%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.container-two:nth-child(1) h1{
+    width: 33.3%;    
+    max-width: 100%;
+    margin: auto;    
+    overflow: hidden;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+
+.time p{
+    font-size: 60px;
+    font-family: Outfit;
+}
+
+input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid cyan;
+    color: white;
+    font-size: 40px;
+}
+
+button{
+    background-color: cyan;
+    padding: 15px 30px;
+    border-radius: 0px;
+    border: none;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+p#tasks{
+    font-size: 20px;  
+    transition: 1s ease-in;
+  
+}
+
+.fade-out{
+    transition: all 0.5s ease-in;
+}
+
+.task-main{
+    color: white;
+    width: 500px;
+    max-width: 100%;
+    background-color: rgb(0, 106, 198);
+    padding: 5px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    transition: 1s ease-in;
+}
+
+i{
+    transform: rotate(45deg);
+    font-size: 20px;
+}
+
+#task-items{
+    transition: 1s ease-in;
+
+    height: 20vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* For WebKit based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container-one h1{
+  padding: 20px;
+  font-family: Outfit;
+  text-align: left;
+}
+
+.apps{
+    margin-top: 50px;
+}
+
+.apps ul{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;    
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: left;
+}
+
+li p{
+    text-align: center;
+    font-size: 20px;
+}
