@@ -28,7 +28,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: 18vh;
 }
 
 .time p{
@@ -42,8 +42,21 @@ input{
     border-bottom: 2px solid cyan;
     color: white;
     font-size: 40px;
+    width: 100%;
+    max-width: 100%;
 }
 
+input.g-search{
+    margin-top: 30px;
+    border: 2px solid grey;
+    background-color: transparent;
+    border-radius: 80px;
+    color: white;
+    font-size: 40px;
+    width: 100%;
+    padding: 5px;
+    max-width: 100%;
+}
 button{
     background-color: cyan;
     padding: 15px 30px;
@@ -84,13 +97,12 @@ i{
 
 #task-items{
     transition: 1s ease-in;
-
     height: 20vh;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 
-/* For WebKit based browsers (Chrome, Safari) */
+
 ::-webkit-scrollbar {
     width: 0px;
   }
@@ -111,6 +123,24 @@ i{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+}
+
+.container-one{
+    width: 33%;
+    overflow: hidden;
+    margin-left: auto;
+}
+.container-two{
+    width: 33%;
+    overflow: hidden;
+    margin: auto;
+    max-width: 100%;
+}
+.container-three{
+    width: 30%;
+    overflow: hidden;
+    margin-right: auto;   
 }
 
 
@@ -118,6 +148,10 @@ i{
   padding: 20px;
   font-family: Outfit;
   text-align: left;
+}
+
+.important-things{
+    margin-top: 50px;
 }
 
 .apps{
@@ -143,4 +177,61 @@ li{
 li p{
     text-align: center;
     font-size: 20px;
+}
+
+li img{
+    width: 100px;
+    height: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+a::after{
+    content: " ";
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 3px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: center center;
+    transition: all 0.3s ease-in;
+}
+
+a:hover::after{    
+    transform: scaleX(1);
+}
+
+.accordion-button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+    font-size: 1rem;
+    color: var(--bs-accordion-btn-color);
+    text-align: left;
+    background-color: #13A3BA   ;
+    border: none;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: var(--bs-accordion-transition);
+}
+
+.accordion-item {
+    color: black;
+    background-color: var(--bs-accordion-bg);
+     border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: cyan;
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
 }
